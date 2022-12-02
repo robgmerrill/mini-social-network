@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
 import Loader from "../components/Loader";
+import toast from "react-hot-toast";
 
 export default function Home() {
   return (
     <div>
       <h1>Home Page</h1>
-      <Loader show={true} />
-      <Link href="/">Go to somewhere</Link>
+      <button onClick={() => toast.success("Hello Toast")}>Toast</button>
     </div>
   );
 }
